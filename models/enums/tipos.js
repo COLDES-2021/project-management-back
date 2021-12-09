@@ -2,15 +2,15 @@ import { gql } from 'apollo-server-express';
 
 const tiposEnums = gql`
   enum Enum_EstadoUsuario {
-    PENDIENTE
-    AUTORIZADO
-    NO_AUTORIZADO
+    Pendiente
+    Autorizado
+    No_Autorizado
   }
 
   enum Enum_Rol {
-    ESTUDIANTE
-    LIDER
-    ADMINISTRADOR
+    Estudiante
+    Lider
+    Administrador
   }
 
   enum Enum_EstadoProyecto {
@@ -33,7 +33,7 @@ const tiposEnums = gql`
   enum Enum_EstadoInscripcion {
     ACEPTADO
     RECHAZADO
-    PENDIENTE
+    Pendiente
   }
 `;
 

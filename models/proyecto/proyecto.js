@@ -35,13 +35,13 @@ const projectSchema = new Schema(
     },
     estado: {
       type: String,
-      enum: ['ACTIVO', 'INACTIVO'],
-      default: 'INACTIVO',
+      enum: ['Activo', 'Inactivo'],
+      default: 'Inactivo',
     },
     fase: {
       type: String,
-      enum: ['INICIADO', 'DESARROLLO', 'TERMINADO', 'NULO'],
-      default: 'NULO',
+      enum: ['Iniciado', 'Desarrollo', 'Terminado', 'Nulo'],
+      default: 'Nulo',
     },
     lider: {
       type: Schema.Types.ObjectId,
@@ -56,15 +56,15 @@ const projectSchema = new Schema(
         },
         tipo: {
           type: String,
-          enum: ['GENERAL', 'ESPECIFICO'],
+          enum: ['General', 'Específico'],
           required: true,
         },
       },
     ],
   },
   {
-    toJSON: { virtuals: true }, // So `res.json()` and other `JSON.stringify()` functions include virtuals
-    toObject: { virtuals: true }, // So `console.log()` and other functions that use `toObject()` include virtuals
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
 

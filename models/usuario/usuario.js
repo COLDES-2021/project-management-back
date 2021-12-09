@@ -46,12 +46,12 @@ const userSchema = new Schema({
   rol: {
     type: String,
     required: true,
-    enum: ['ESTUDIANTE', 'LIDER', 'ADMINISTRADOR'],
+    enum: ['Estudiante', 'Lider', 'Administrador'],
   },
   estado: {
     type: String,
-    enum: ['PENDIENTE', 'AUTORIZADO', 'NO_AUTORIZADO'],
-    default: 'PENDIENTE',
+    enum: ['Pendiente', 'Autorizado', 'No_Autorizado'],
+    default: 'Pendiente',
   },
 });
 

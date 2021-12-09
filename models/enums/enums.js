@@ -1,13 +1,13 @@
 // enum Enum_Rol {
-//   ESTUDIANTE = 'ESTUDIANTE',
-//   LIDER = 'LIDER',
-//   ADMINISTRADOR = 'ADMINISTRADOR',
+//   Estudiante = 'Estudiante',
+//   Lider = 'Lider',
+//   Administrador = 'Administrador',
 // }
 
 // enum Enum_EstadoUsuario {
-//   PENDIENTE = 'PENDIENTE',
-//   AUTORIZADO = 'AUTORIZADO',
-//   NO_AUTORIZADO = 'NO_AUTORIZADO',
+//   Pendiente = 'Pendiente',
+//   Autorizado = 'Autorizado',
+//   No_Autorizado = 'No_Autorizado',
 // }
 
 // enum Enum_EstadoProyecto {
