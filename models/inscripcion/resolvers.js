@@ -20,7 +20,7 @@ const resolverInscripciones = {
       const inscripcionAprobada = await InscriptionModel.findByIdAndUpdate(
         args.id,
         {
-          estado: 'ACEPTADO',
+          estado: 'Aceptado',
           fechaIngreso: Date.now(),
         },
         { new: true }

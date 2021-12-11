@@ -4,12 +4,12 @@ const tiposProyecto = gql`
   type Objetivo {
     _id: ID!
     descripcion: String!
-    tipo: Enum_TipoObjetivo!
+    tipo: Listado_TipoObjetivo!
   }
 
   input crearObjetivo {
     descripcion: String!
-    tipo: Enum_TipoObjetivo!
+    tipo: Listado_TipoObjetivo!
   }
 
   type Proyecto {
@@ -18,8 +18,8 @@ const tiposProyecto = gql`
     presupuesto: Float!
     fechaInicio: Date!
     fechaFin: Date!
-    estado: Enum_EstadoProyecto!
-    fase: Enum_FaseProyecto!
+    estado: Listado_EstadoProyecto!
+    fase: Listado_FaseProyecto!
     lider: Usuario!
     objetivos: [Objetivo]
     avances: [Avance]
@@ -36,8 +36,8 @@ const tiposProyecto = gql`
       presupuesto: Float!
       fechaInicio: Date!
       fechaFin: Date!
-      estado: Enum_EstadoProyecto!
-      fase: Enum_FaseProyecto!
+      estado: Listado_EstadoProyecto!
+      fase: Listado_FaseProyecto!
       lider: String!
       objetivos: [crearObjetivo]
     ): Proyecto
