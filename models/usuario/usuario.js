@@ -20,6 +20,10 @@ const userSchema = new Schema({
       message: 'El correo electrónico está mal escrito.',
     },
   },
+  password: {
+    type: String,
+    required: true,
+  },
   identificacion: {
     type: String,
     required: true,
