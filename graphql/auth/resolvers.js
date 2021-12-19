@@ -56,8 +56,24 @@ const resolversAutenticacion = {
     // Validación: Info Usuario Correcta -- refrescar Token
     // Si Info usuario Incorrecta -- null y redirigir al Login en el front
 
-    validateToken: async (parent, args, context) => {
+    refreshToken: async (parent, args, context) => {
       console.log('contexto', context);
+      if (!context.userData) {
+        return {
+          error: 'token no valido',
+        };
+      } else {
+        return {
+          token: generateToken({
+            _id: context.userData._id,
+            nombre: context.userData.nombre,
+            apellido: context.userData.apellido,
+            identificacion: context.userData.identificacion,
+            correo: context.userData.correo,
+            rol: context.userData.rol,
+          }),
+        };
+      }
     },
   },
 };

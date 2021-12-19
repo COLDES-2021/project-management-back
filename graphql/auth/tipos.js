@@ -23,7 +23,7 @@ type Mutation {
       password: String!
     ): Token
 
-    validateToken: Token
+    refreshToken: Token
     }
 `;
 
