@@ -12,6 +12,21 @@ const tiposProyecto = gql`
     tipo: Listado_TipoObjetivo!
   }
 
+  input camposObjetivo{
+    descripcion: String!
+    tipo: Listado_TipoObjetivo!
+  }
+
+  input camposProyecto {
+    nombre: String
+    presupuesto: Float
+    fechaInicio: Date
+    fechaFin: Date
+    estado: Listado_EstadoProyecto
+    fase: Listado_FaseProyecto
+    lider: String
+  }
+
   type Proyecto {
     _id: ID!
     nombre: String!
@@ -41,6 +56,14 @@ const tiposProyecto = gql`
       lider: String!
       objetivos: [crearObjetivo]
     ): Proyecto
+
+    editarProyecto(_id: String!, campos: camposProyecto!): Proyecto
+
+    crearObjetivo(idProyecto: String!, campos: camposObjetivo!): Proyecto
+
+    editarObjetivo(idProyecto: String!, indexObjetivo: Int!, campos: camposObjetivo!): Proyecto
+    
+    eliminarObjetivo(idProyecto: String!, idObjetivo: String!): Proyecto
   }
 `;
 
