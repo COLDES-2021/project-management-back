@@ -51,8 +51,8 @@ const tiposProyecto = gql`
       presupuesto: Float!
       fechaInicio: Date!
       fechaFin: Date!
-      estado: Listado_EstadoProyecto!
-      fase: Listado_FaseProyecto!
+      # estado: Listado_EstadoProyecto!
+      # fase: Listado_FaseProyecto!
       lider: String!
       objetivos: [crearObjetivo]
     ): Proyecto

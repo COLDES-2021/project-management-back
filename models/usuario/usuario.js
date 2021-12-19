@@ -40,6 +40,10 @@ const userSchema = new Schema({
     enum: ['Pendiente', 'Autorizado', 'No_Autorizado'],
     default: 'Pendiente',
   },
+  foto: {
+    type: String,
+    required: false,
+  },
 });
 
 userSchema.virtual('proyectosLiderados', {
